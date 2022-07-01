@@ -12,7 +12,7 @@ Data:
     - name: denoise
 Model:
   name: DCRN_net
-  load_model: ../Model/dcrn_net_33.pt
+  load_model: ../Model/dcrn_net_43.pt
   save_audio: ../Audios
   #params: ../Results/bce_loss/Models/049/basemodel_49.pt
 
