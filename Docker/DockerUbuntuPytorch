@@ -88,23 +88,8 @@ RUN pip3 install onnxruntime
 RUN pip3 install thop
 RUN pip3 install lap
 RUN pip3 install cython_bbox
-RUN pip3 install pytorch2keras
-RUN pip3 install tensorflow
-RUN pip3 install keras
 RUN pip3 install onnx==1.8.1
-RUN pip3 install git+https://github.com/onnx/tensorflow-onnx
-RUN pip3 uninstall tensorflow-gpu
-RUN pip3 cache purge
-RUN pip3 install tensorflow-gpu --no-cache-dir
-RUN pip3 install optuna
-RUN pip3 install boruta
-RUN pip3 install lightgbm
-RUN pip3 install category_encoders
-RUN pip3 uninstall timm -y
 RUN pip3 install 'git+https://github.com/rwightman/pytorch-image-models.git'
-RUN pip3 install einops
 RUN pip3 install scikit-image
-RUN pip3 uninstall segmentation-models-pytorch -y
-RUN pip3 install 'git+https://github.com/qubvel/segmentation_models.pytorch'
 RUN pip3 install librosa
 RUN pip3 install soundfile
