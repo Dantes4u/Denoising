@@ -1,0 +1,13 @@
+Directories:
+  - config
+  - data
+  - experiment
+  - logs
+  - models
+Filenames:
+  - train_model.py
+  - project.py
+  - train.sh
+Logs_dir: ../Results/2906_solo_free
+Configuration: train.yaml
+Type: train

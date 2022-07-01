@@ -1,0 +1,49 @@
+gpu: true
+Data:
+  data_dir: /workspace/data
+  metadata_dir: /workspace/all_projects/Denoise/Markup
+  val_dir: /workspace/all_projects/Denoise/Examples
+  save_all: false
+  train_datasets:
+    - train
+  test_datasets:
+    - test
+  domains:
+    - name: denoise
+Model:
+  name: DCRN_net
+  load_model: ../Model/dcrn_net_27.pt
+  save_audio: ../Audios
+  #params: ../Results/bce_loss/Models/049/basemodel_49.pt
+
+Transform:
+  aug: false
+  num_repeats: 1
+
+
+Parameters:
+  batch_size: 256
+  num_epochs: 50
+  num_workers: 2
+  prefetch_factor: 2
+  initial_lr: 1e-4
+  weight_decay: 5e-4
+  lookahead_mergetime: 4
+  pin_memory: false
+
+Experiment:
+  settings:
+    ignore_value: -1
+    figsize:
+      - 12
+      - 8
+    dpi: 200
+    title_size: 14
+    axis_size: 12
+    label_size: 10
+    text_size: 10
+    legend_size: 10
+    grid_alpha: 0.35
+    saturation: 0.9
+    color: 'royalblue'
+    type: jpg
